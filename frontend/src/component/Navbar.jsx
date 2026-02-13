@@ -1,5 +1,6 @@
 import { User, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,63 +21,57 @@ export default function Navbar() {
         </button>
 
         {/* Logo */}
-        <a href="/">
-        <img
-          src="/image/Right Enterprises logo.png"
-          alt="Right Enterprises Logo"
-          className="pl-4 md:pl-16 h-10 sm:h-12 w-auto object-contain cursor-pointer"
-        />  </a>
+        <Link to="/">
+          <img
+            src="/image/Right Enterprises logo.png"
+            alt="Right Enterprises Logo"
+            className="pl-4 md:pl-16 h-10 sm:h-12 w-auto object-contain cursor-pointer"
+          />
+        </Link>
       </div>
 
       {/* Center Navigation Links - Desktop */}
       <div className="hidden md:flex w-full justify-center items-center gap-10 text-[12px] tracking-[0.2em] uppercase">
-        <a href="/" className="hover:text-pink-400 transition whitespace-nowrap">
+        <Link to="/" className="hover:text-pink-400 transition whitespace-nowrap">
           Home
-        </a>
-        {/* <a href="#book" className="hover:text-pink-400 transition whitespace-nowrap">
-          Book Online
-        </a> */}
-        <a href="/about" className="hover:text-pink-400 transition whitespace-nowrap">
+        </Link>
+
+        <Link to="/about" className="hover:text-pink-400 transition whitespace-nowrap">
           About Us
-        </a>
-         <a href="/contact" className="hover:text-pink-400 transition whitespace-nowrap">
+        </Link>
+
+        <Link to="/contact" className="hover:text-pink-400 transition whitespace-nowrap">
           Contact
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
         <div className="absolute top-[60px] left-0 w-full bg-[#576a12] md:hidden py-4 px-6 shadow-lg">
           <div className="flex flex-col space-y-4">
-            <a 
-              href="" 
+            <Link 
+              to="/" 
               className="hover:text-pink-400 transition uppercase"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
-            </a>
+            </Link>
 
-            {/* <a 
-              href="#book" 
-              className="hover:text-pink-400 transition uppercase"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Book Online
-            </a> */}
-            <a 
-              href="/about" 
+            <Link 
+              to="/about" 
               className="hover:text-pink-400 transition uppercase"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
-            </a>
-                        <a 
-              href="/contact" 
+            </Link>
+
+            <Link 
+              to="/contact" 
               className="hover:text-pink-400 transition uppercase"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       )}
@@ -90,9 +85,10 @@ export default function Navbar() {
         <div className="w-8 h-8 rounded-full flex items-center justify-center">
           <User size={16} />
         </div>
-        <span className="hover:text-pink-400 transition cursor-pointer">
+
+        <Link to="/login" className="hover:text-pink-400 transition cursor-pointer">
           Log In
-        </span>
+        </Link>
       </div>
 
     </nav>
