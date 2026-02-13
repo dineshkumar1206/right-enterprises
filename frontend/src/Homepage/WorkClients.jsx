@@ -18,13 +18,13 @@ export default function WorkClients() {
     <section className="w-full relative">
 
       {/* Title Wrapper */}
-  <div className="absolute left-1/2 -top-12 -translate-x-1/2 z-20">
+  <div className="absolute left-1/2 -top-15 -translate-x-1/2 z-20">
 
   <div
     className="relative bg-[#ff0048] text-white
-               w-[250px] h-[50px]
+               w-[300px] h-[60px]
                flex items-center justify-center
-               text-sm tracking-[0.10em] 
+               text-lg tracking-[0.10em]
                " 
   >
     Work & Clients
@@ -43,7 +43,7 @@ export default function WorkClients() {
 
 
       {/* Space for overlap */}
-      <div className=""></div>
+      <div className="-mt-11"></div>
 
       {/* Image Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 w-full cursor-pointer">
@@ -62,7 +62,7 @@ export default function WorkClients() {
                             flex items-center justify-center">
 
               <h3 className="text-white text-lg font-medium">
-                I’m an image titl
+                I’m an image title
               </h3>
 
             </div>

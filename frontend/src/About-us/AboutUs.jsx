@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import Services from "./Services";
+import StatsSection from "./StatsSection";
+import WhyChooseSection from "./WhyChoose";
+// import ScrollReveal from "../component/ScrollReveal";
 
 export default function AboutUs() {
   return (
     <>
       {/* Section Heading */}
-      <div className="py-6">
+      <div className="py-4 mt-18">
         <h2 className="text-5xl text-center text-black">
           About Us
         </h2>
@@ -74,6 +77,20 @@ export default function AboutUs() {
         </div>
       </section>
       <Services/>
+      {/* <ScrollReveal
+  baseOpacity={0.1}
+  enableBlur
+  baseRotation={3}
+  blurStrength={4}
+>
+  When does a man die? When he is hit by a bullet? No! When he suffers a disease?
+  No! When he ate a soup made out of a poisonous mushroom?
+  No! A man dies when he is forgotten!
+</ScrollReveal>      */}
+
+      <StatsSection/>
+      <WhyChooseSection/>
+      
     </>
   );
 }

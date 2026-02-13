@@ -20,16 +20,17 @@ export default function Navbar() {
         </button>
 
         {/* Logo */}
+        <a href="/">
         <img
           src="/image/Right Enterprises logo.png"
           alt="Right Enterprises Logo"
-          className="pl-4 md:pl-16 h-10 sm:h-12 w-auto object-contain"
-        />
+          className="pl-4 md:pl-16 h-10 sm:h-12 w-auto object-contain cursor-pointer"
+        />  </a>
       </div>
 
       {/* Center Navigation Links - Desktop */}
       <div className="hidden md:flex w-full justify-center items-center gap-10 text-[12px] tracking-[0.2em] uppercase">
-        <a href="#home" className="hover:text-pink-400 transition whitespace-nowrap">
+        <a href="/" className="hover:text-pink-400 transition whitespace-nowrap">
           Home
         </a>
         <a href="#contact" className="hover:text-pink-400 transition whitespace-nowrap">
@@ -38,7 +39,7 @@ export default function Navbar() {
         <a href="#book" className="hover:text-pink-400 transition whitespace-nowrap">
           Book Online
         </a>
-        <a href="" className="hover:text-pink-400 transition whitespace-nowrap">
+        <a href="/about" className="hover:text-pink-400 transition whitespace-nowrap">
           About Us
         </a>
       </div>
@@ -48,7 +49,7 @@ export default function Navbar() {
         <div className="absolute top-[60px] left-0 w-full bg-[#576a12] md:hidden py-4 px-6 shadow-lg">
           <div className="flex flex-col space-y-4">
             <a 
-              href="#home" 
+              href="" 
               className="hover:text-pink-400 transition uppercase"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -67,6 +68,13 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               Book Online
+            </a>
+            <a 
+              href="/about" 
+              className="hover:text-pink-400 transition uppercase"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Us
             </a>
           </div>
         </div>

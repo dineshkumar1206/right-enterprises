@@ -12,7 +12,7 @@ export default function Home() {
         <img
           src="/image/homepage-banner.jpg"
           alt="background"
-          className="  w-full h-full object-cover object-center"
+          className="  w-full h-[93%] object-cover object-center"
         />
 
         {/* Gradient overlay (lighter like Wix) */}
