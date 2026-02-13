@@ -43,7 +43,7 @@ export default function WorkClients() {
 
 
       {/* Space for overlap */}
-      <div className="pt-16"></div>
+      <div className=""></div>
 
       {/* Image Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 w-full cursor-pointer">
@@ -53,7 +53,7 @@ export default function WorkClients() {
             <img
               src={img}
               alt={`work-${index}`}
-              className="w-full h-[230px] object-cover"
+              className="w-[320px] h-[320px] object-cover"
             />
 
             {/* Hover Overlay */}

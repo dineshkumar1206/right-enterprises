@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full bg-[#576a12] text-white min-h-[60px] flex items-center z-30 px-4 sm:px-6 md:px-8">
+    <nav className="absolute top-0 left-0 w-full bg-[#000000] text-white min-h-[60px] flex items-center z-30 px-4 sm:px-6 md:px-8">
 
       {/* LEFT SIDE: Logo + Mobile Menu */}
       <div className="flex items-center gap-4 pl-4 sm:pl-6 md:pl-10">
@@ -23,7 +23,7 @@ export default function Navbar() {
         <img
           src="/image/Right Enterprises logo.png"
           alt="Right Enterprises Logo"
-          className=" h-10 sm:h-12 w-auto object-contain"
+          className="pl-4 md:pl-16 h-10 sm:h-12 w-auto object-contain"
         />
       </div>
 
@@ -37,6 +37,9 @@ export default function Navbar() {
         </a>
         <a href="#book" className="hover:text-pink-400 transition whitespace-nowrap">
           Book Online
+        </a>
+        <a href="" className="hover:text-pink-400 transition whitespace-nowrap">
+          About Us
         </a>
       </div>
 

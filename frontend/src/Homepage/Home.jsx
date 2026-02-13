@@ -24,27 +24,22 @@ export default function Home() {
         <Navbar />
       </div>
 
-    {/* Hero Content */}
-<div className=" relative flex flex-col items-center justify-center h-full text-center text-white px-6 gap-12">
+{/* Hero Content */}
+<div className="relative flex flex-col items-center justify-center h-full text-center text-white px-6 gap-6">
 
   {/* Main Heading */}
-  <h1 className="font-display italic text-[25px] md:text-[45px] leading-[1] tracking-wide">
-    WEB <span className="font-bold">folk</span>
+  <h1 className="font-semibold text-[20px] sm:text-[26px] md:text-[34px] lg:text-[42px] leading-snug tracking-wide">
+    Your design gets with a <br />
+    <span className="font-bold">Perfect impression</span>
   </h1>
 
-  {/* Subtitle */}
-  <p className="mt-4 text-base tracking-widest-custom uppercase font-medium">
-    Web Design Studio
-  </p>
-
-  {/* Description */}
-  <p className="mt-8 text-[18px] leading-[1.8] font-medium max-w-2xl">
-    We dream, explore, create and craft <br />
-    progressive digital experiences
+  {/* Divider Text */}
+  <p className="text-[10px] sm:text-[12px] md:text-[13px] tracking-wider uppercase font-medium text-white/80">
+    Offset Printing <span className="mx-2">|</span> Digital Printing <span className="mx-2">|</span> Package Manufacturing
   </p>
 
 </div>
-    </div>
+</div>
     <WorkClients/>
     </>
   );
