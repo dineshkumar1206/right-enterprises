@@ -17,7 +17,7 @@ function App() {
       
     </Routes>
      {/* <Home/> */}
-     {/* <AboutUs/> */}
+     <AboutUs/>
      
 
      
