@@ -15,34 +15,50 @@ export default function WorkClients() {
   ];
 
   return (
-    <section className="w-full">
+    <section className="w-full relative">
 
-      {/* Title Bar */}
-      <div className="relative bg-pink-600 text-white text-center py-6 text-sm tracking-[0.4em] uppercase">
-        Work & Clients
+      {/* Title Wrapper */}
+  <div className="absolute left-1/2 -top-12 -translate-x-1/2 z-20">
 
-        {/* Small triangle bottom (like Wix) */}
-        <div className="absolute left-1/2 -bottom-3 -translate-x-1/2 w-0 h-0 
-                        border-l-[12px] border-l-transparent
-                        border-r-[12px] border-r-transparent
-                        border-t-[12px] border-t-pink-600">
-        </div>
-      </div>
+  <div
+    className="relative bg-[#ff0048] text-white
+               w-[250px] h-[50px]
+               flex items-center justify-center
+               text-sm tracking-[0.10em] 
+               " 
+  >
+    Work & Clients
+
+    {/* Bigger Triangle */}
+    <div
+      className="absolute left-1/2 -bottom-5 -translate-x-1/2
+                 w-0 h-0
+                 border-l-[22px] border-l-transparent
+                 border-r-[22px] border-r-transparent
+                 border-t-[22px] border-t-[#ff0048]"
+    ></div>
+
+  </div>
+</div>
+
+
+      {/* Space for overlap */}
+      <div className="pt-16"></div>
 
       {/* Image Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 w-full">
+      <div className="grid grid-cols-2 md:grid-cols-4 w-full cursor-pointer">
         {images.map((img, index) => (
           <div key={index} className="relative group overflow-hidden">
             
             <img
               src={img}
               alt={`work-${index}`}
-              className="w-full h-[300px] object-cover"
+              className="w-full h-[230px] object-cover"
             />
 
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-pink-600/80 opacity-0 
-                            group-hover:opacity-100 transition duration-300 
+            <div className="absolute inset-0 bg-[#ff0a54]/80 opacity-0 
+                            group-hover:opacity-100 transition duration-100 
                             flex items-center justify-center">
 
               <h3 className="text-white text-lg font-medium">
