@@ -33,14 +33,14 @@ export default function Navbar() {
         <a href="/" className="hover:text-pink-400 transition whitespace-nowrap">
           Home
         </a>
-        <a href="#contact" className="hover:text-pink-400 transition whitespace-nowrap">
-          Contact
-        </a>
-        <a href="#book" className="hover:text-pink-400 transition whitespace-nowrap">
+        {/* <a href="#book" className="hover:text-pink-400 transition whitespace-nowrap">
           Book Online
-        </a>
+        </a> */}
         <a href="/about" className="hover:text-pink-400 transition whitespace-nowrap">
           About Us
+        </a>
+         <a href="/contact" className="hover:text-pink-400 transition whitespace-nowrap">
+          Contact
         </a>
       </div>
 
@@ -55,26 +55,27 @@ export default function Navbar() {
             >
               Home
             </a>
-            <a 
-              href="#contact" 
-              className="hover:text-pink-400 transition uppercase"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </a>
-            <a 
+
+            {/* <a 
               href="#book" 
               className="hover:text-pink-400 transition uppercase"
               onClick={() => setIsMenuOpen(false)}
             >
               Book Online
-            </a>
+            </a> */}
             <a 
               href="/about" 
               className="hover:text-pink-400 transition uppercase"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
+            </a>
+                        <a 
+              href="/contact" 
+              className="hover:text-pink-400 transition uppercase"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
             </a>
           </div>
         </div>
