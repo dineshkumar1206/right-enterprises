@@ -53,7 +53,7 @@ export default function WorkClients() {
             <img
               src={img}
               alt={`work-${index}`}
-              className="w-[320px] h-[320px] object-cover"
+              className="w-full h-full object-cover"
             />
 
             {/* Hover Overlay */}
