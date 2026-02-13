@@ -62,7 +62,7 @@ export default function WorkClients() {
                             flex items-center justify-center">
 
               <h3 className="text-white text-lg font-medium">
-                I’m an image title
+                I’m an image titl
               </h3>
 
             </div>
