@@ -47,7 +47,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <div className="absolute top-[60px] left-0 w-full bg-[#576a12] md:hidden py-4 px-6 shadow-lg">
+        <div className="absolute top-[60px] left-0 w-full bg-[#000000] md:hidden py-4 px-6 shadow-lg">
           <div className="flex flex-col space-y-4">
             <Link 
               to="/" 
@@ -77,7 +77,7 @@ export default function Navbar() {
       )}
 
       {/* Right Side Login */}
-      <div className={`
+      {/* <div className={`
         ${isMenuOpen ? 'hidden' : 'flex'} 
         absolute right-4 sm:right-6 md:right-12 
         items-center gap-2 text-[12px]
@@ -89,7 +89,7 @@ export default function Navbar() {
         <Link to="/login" className="hover:text-pink-400 transition cursor-pointer">
           Log In
         </Link>
-      </div>
+      </div> */}
 
     </nav>
   );
