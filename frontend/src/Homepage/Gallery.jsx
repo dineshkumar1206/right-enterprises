@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Gallery() {
-  const [active, setActive] = useState(null);
+  const [activeImage, setActiveImage] = useState(null); // for desktop lightbox
+  const [mobileIndex, setMobileIndex] = useState(0); // for mobile slider
 
   const images = [
     "/image/022.jpg",
@@ -12,72 +13,130 @@ export default function Gallery() {
     "/image/NSK Brochure.jpg",
   ];
 
+  const prevSlide = () => {
+    setMobileIndex((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
+  };
+
+  const nextSlide = () => {
+    setMobileIndex((prev) =>
+      prev === images.length - 1 ? 0 : prev + 1
+    );
+  };
+
   return (
     <>
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-10 text-center ">
-        Gallery
-    </h2>
-      <section className="w-full h-screen bg-gray-50 flex items-center px-6">
-        <div className="max-w-7xl mx-auto w-full h-[90vh] flex flex-col gap-6">
+      <section className="w-full bg-gray-100 py-20 px-6">
+        <div className="max-w-7xl mx-auto">
 
-          {/* Top 2 Images */}
-          <div className="flex gap-6 h-1/2">
-            {images.slice(0, 2).map((src, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                onClick={() => setActive(src)}
-                className="flex-1 overflow-hidden rounded-2xl shadow-md hover:shadow-xl cursor-pointer"
-              >
-                <img
-                  src={src}
-                  alt="gallery"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            ))}
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+            Gallery
+          </h2>
+
+          {/* ================= Desktop Collage ================= */}
+          <div className="hidden md:flex gap-6 h-[750px]">
+
+            {/* LEFT SIDE */}
+            <div className="w-1/2 flex flex-col gap-6">
+
+              <div className="grid grid-cols-2 gap-6 h-[35%]">
+                <ImageBox src={images[0]} onClick={setActiveImage} />
+                <ImageBox src={images[1]} onClick={setActiveImage} />
+              </div>
+
+              <div className="h-[65%]">
+                <ImageBox src={images[3]} onClick={setActiveImage} />
+              </div>
+
+            </div>
+
+            {/* RIGHT SIDE */}
+            <div className="w-1/2 flex flex-col gap-6">
+
+              <div className="h-1/2">
+                <ImageBox src={images[2]} onClick={setActiveImage} />
+              </div>
+
+              <div className="h-1/2">
+                <ImageBox src={images[4]} onClick={setActiveImage} />
+              </div>
+
+            </div>
+
           </div>
 
-          {/* Bottom 3 Images */}
-          <div className="flex gap-6 h-1/2">
-            {images.slice(2, 5).map((src, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                onClick={() => setActive(src)}
-                className="flex-1 overflow-hidden rounded-2xl shadow-md hover:shadow-xl cursor-pointer"
-              >
-                <img
-                  src={src}
-                  alt="gallery"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            ))}
+          {/* ================= Mobile Slider ================= */}
+          <div className="md:hidden relative w-full max-w-md mx-auto">
+
+            {/* Image */}
+            <div className="relative h-[400px] overflow-hidden rounded-2xl shadow-lg">
+              <motion.img
+                key={mobileIndex}
+                src={images[mobileIndex]}
+                alt="gallery"
+                initial={{ opacity: 0.5 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Left Arrow */}
+            <button
+              onClick={prevSlide}
+              className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl"
+            >
+              ❮
+            </button>
+
+            {/* Right Arrow */}
+            <button
+              onClick={nextSlide}
+              className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl"
+            >
+              ❯
+            </button>
+
           </div>
 
         </div>
       </section>
 
-      {/* Lightbox */}
-      {active && (
+      {/* ================= Desktop Lightbox ================= */}
+      {activeImage && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 backdrop-blur-sm"
-          onClick={() => setActive(null)}
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={() => setActiveImage(null)}
         >
           <motion.img
-            src={active}
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            src={activeImage}
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
             transition={{ duration: 0.3 }}
             className="max-w-5xl w-[90%] rounded-xl shadow-2xl"
           />
         </motion.div>
       )}
     </>
+  );
+}
+
+function ImageBox({ src, onClick, className = "" }) {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.3 }}
+      onClick={() => onClick(src)}
+      className={`relative w-full h-full overflow-hidden rounded-2xl shadow-md hover:shadow-xl cursor-pointer ${className}`}
+    >
+      <img
+        src={src}
+        alt="gallery"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    </motion.div>
   );
 }
