@@ -49,7 +49,7 @@ export default function AboutUs() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900"
             >
-              Why Choose Right Enterprises
+              About Us
             </motion.h2>
 
             {/* <motion.p

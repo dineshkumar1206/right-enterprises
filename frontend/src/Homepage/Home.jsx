@@ -1,4 +1,5 @@
 import Navbar from "../component/Navbar";
+import Gallery from "./Gallery";
 import WorkClients from "./WorkClients";
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
 </div>
 </div>
     <WorkClients/>
+    <Gallery/>
     </>
   );
 }
