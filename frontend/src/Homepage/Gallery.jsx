@@ -70,7 +70,7 @@ export default function Gallery() {
           <div className="md:hidden relative w-full max-w-md mx-auto">
 
             {/* Image */}
-            <div className="relative h-[400px] overflow-hidden rounded-2xl shadow-lg">
+            <div className="relative h-[400px] overflow-hidden">
               <motion.img
                 key={mobileIndex}
                 src={images[mobileIndex]}
@@ -116,7 +116,7 @@ export default function Gallery() {
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="max-w-5xl w-[90%] rounded-xl shadow-2xl"
+            className="max-w-5xl w-[90%]"
           />
         </motion.div>
       )}
@@ -130,7 +130,7 @@ function ImageBox({ src, onClick, className = "" }) {
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.3 }}
       onClick={() => onClick(src)}
-      className={`relative w-full h-full overflow-hidden rounded-2xl shadow-md hover:shadow-xl cursor-pointer ${className}`}
+      className={`relative w-full h-full overflow-hidden cursor-pointer ${className}`}
     >
       <img
         src={src}
