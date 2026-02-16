@@ -9,9 +9,9 @@ export default function AboutUs() {
     <>
       {/* Section Heading */}
       <div className="py-4 mt-18">
-        <h2 className="text-5xl text-center text-black">
+        {/* <h2 className="text-5xl text-center text-black">
           About Us
-        </h2>
+        </h2> */}
       </div>
 
       <section className="w-full flex items-center justify-center px-4 md:px-10 lg:px-18 bg-white pb-16">
@@ -49,7 +49,7 @@ export default function AboutUs() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900"
             >
-              Meet Right Enterprises
+              Why Choose Right Enterprises
             </motion.h2>
 
             {/* <motion.p
