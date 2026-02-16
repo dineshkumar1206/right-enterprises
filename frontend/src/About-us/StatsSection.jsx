@@ -38,7 +38,7 @@ export default function StatsSection() {
         {/* Left Image */}
         <div className="overflow-hidden">
           <motion.img
-            src="/image/14-nsk.jpg"
+            src="/image/251.jpg.jpeg"
             alt="Printing"
             className="w-full h-full object-cover"
             variants={imageVariants}
