@@ -33,7 +33,7 @@ export default function StatsSection() {
   };
 
   return (
-    <section ref={ref} className="w-full bg-white py-16 px-4 md:px-12 ">
+    <section ref={ref} className="w-full bg-white py-10 px-4 md:px-12 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left Image */}
         <div className="overflow-hidden">

@@ -43,7 +43,7 @@ export default function WorkClients() {
 
 
       {/* Space for overlap */}
-      <div className="-mt-11"></div>
+      <div className="-mt-50"></div>
 
       {/* Image Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 w-full cursor-pointer">

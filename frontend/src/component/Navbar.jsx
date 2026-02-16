@@ -14,7 +14,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-white hover:text-pink-400 transition"
+          className="md:hidden text-white hover:text-gray-300 transition"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -32,23 +32,26 @@ export default function Navbar() {
 
       {/* Center Navigation Links - Desktop */}
       <div className="hidden md:flex w-full justify-center items-center gap-10 text-[12px] tracking-[0.2em] uppercase">
-        <Link to="/" className="hover:text-pink-400 transition whitespace-nowrap">
+        <Link to="/" className="hover:text-gray-300  transition whitespace-nowrap">
           Home
         </Link>
 
-        <Link to="/about" className="hover:text-pink-400 transition whitespace-nowrap">
+        <Link to="/gallery" className="hover:text-gray-300  transition whitespace-nowrap">
+          Gallery
+        </Link>
+        <Link to="/about" className="hover:text-gray-300  transition whitespace-nowrap">
           About Us
         </Link>
 
-        <Link to="/contact" className="hover:text-pink-400 transition whitespace-nowrap">
+        <Link to="/contact" className="hover:text-gray-300  transition whitespace-nowrap">
           Contact
         </Link>
       </div>
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <div className="absolute top-[60px] left-0 w-full bg-[#000000] md:hidden py-4 px-6 shadow-lg">
-          <div className="flex flex-col space-y-4">
+        <div className="absolute top-[60px] right-0 w-[250px] bg-[#000000] md:hidden py-4 px-6 shadow-lg">
+          <div className="flex flex-col space-y-4 text-center">
             <Link 
               to="/" 
               className="hover:text-pink-400 transition uppercase"
@@ -57,6 +60,13 @@ export default function Navbar() {
               Home
             </Link>
 
+            <Link 
+              to="/gallery" 
+              className="hover:text-pink-400 transition uppercase"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Gallery
+            </Link>
             <Link 
               to="/about" 
               className="hover:text-pink-400 transition uppercase"

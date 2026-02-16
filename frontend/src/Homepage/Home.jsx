@@ -13,7 +13,7 @@ export default function Home() {
         <img
           src="/image/homepage-banner.jpg"
           alt="background"
-          className="  w-full h-[94%] object-cover object-center"
+          className="  w-full h-[95%] object-cover object-center"
         />
 
         {/* Gradient overlay (lighter like Wix) */}
@@ -25,11 +25,11 @@ export default function Home() {
         <Navbar />
       </div>
 
-{/* Hero Content */}
-<div className="relative flex flex-col items-center justify-center h-full text-center text-white px-6 gap-6">
+  {/* Hero Content */}
+  <div className="relative flex flex-col items-center justify-center h-[80%]  text-center text-white  px-6 gap-6">
 
   {/* Main Heading */}
-  <h1 className="font-semibold text-[20px] sm:text-[26px] md:text-[34px] lg:text-[42px] leading-snug tracking-wide">
+  <h1 className="font-bold text-[20px] sm:text-[26px] md:text-[34px] lg:text-[42px] leading-snug tracking-wide">
     Your design gets with a <br />
     <span className="font-bold">Perfect impression</span>
   </h1>
@@ -42,7 +42,7 @@ export default function Home() {
 </div>
 </div>
     <WorkClients/>
-    <Gallery/>
+    {/* <Gallery/> */}
     </> 
   );
 }

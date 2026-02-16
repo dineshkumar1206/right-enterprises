@@ -8,7 +8,7 @@ import {
 
 export default function Services() {
   return (
-    <section className="w-full min-h-screen flex items-center bg-white px-4 md:px-10 lg:px-18 py-16">
+    <section className="w-full min-h-screen flex items-center bg-white px-4 md:px-10 lg:px-18 py-12">
       <div className="max-w-7xl mx-auto w-full">
 
         {/* Heading */}
