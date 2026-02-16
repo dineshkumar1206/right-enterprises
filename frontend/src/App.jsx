@@ -7,7 +7,7 @@ import Navbar from './component/Navbar';
 import Contact from './component/Contact';
 import Gallery from './Homepage/Gallery';
 import Footer from './component/Footer';
-import ScrollToTop from './component/ScrolltoTop';
+import ScrollToTop from './component/ScrollToTop';
 
 function App() {
 
