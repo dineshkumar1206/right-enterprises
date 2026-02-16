@@ -34,7 +34,7 @@ export default function Footer() {
               <p>
                 11/2, Carpenter St, opposite Sri Srinivasa Hotel,
                 Neelam Garden, Sembiyan, Perambur,
-                Chennai, Tamil Nadu 600011
+                Chennai, Tamil Nadu 600011.
               </p>
             </div>
 
