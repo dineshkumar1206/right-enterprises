@@ -67,6 +67,7 @@ export default function Contact() {
           <input
             type="text"
             name="firstName"
+            required
             value={form.firstName}
             onChange={handleChange}
             className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-black"
@@ -82,6 +83,7 @@ export default function Contact() {
           <input
             type="text"
             name="lastName"
+            required
             value={form.lastName}
             onChange={handleChange}
             className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-black"
@@ -97,6 +99,7 @@ export default function Contact() {
           <input
             type="email"
             name="email"
+            required
             value={form.email}
             onChange={handleChange}
             className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-black"
@@ -112,6 +115,7 @@ export default function Contact() {
           <PhoneInput
             country={"in"}
             value={form.phone}
+            required
             onChange={(phone) => setForm({ ...form, phone })}
             inputStyle={{
               width: "100%",
