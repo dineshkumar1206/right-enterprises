@@ -74,7 +74,7 @@ export default function StatsSection() {
   ];
 
   return (
-    <section ref={ref} className="w-full py-16 px-4 md:px-12 bg-white">
+    <section ref={ref} className="w-full py-6 px-4 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
         {/* ===== STAT BOXES ===== */}
@@ -103,7 +103,7 @@ export default function StatsSection() {
           variants={fadeVariants}
           initial="hidden"
           animate={controls}
-          className="rounded-2xl overflow-hidden shadow-lg min-h-[280px]"
+          className="rounded-2xl overflow-hidden shadow-lg min-h-[340px]"
         >
           <img
             src="/image/251.jpg.jpeg"

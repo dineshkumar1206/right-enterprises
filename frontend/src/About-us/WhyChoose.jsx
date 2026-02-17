@@ -30,7 +30,7 @@ const items = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="w-full bg-[#d2e6ec] py-14 mt-14 px-6 md:px-12">
+    <section className="w-full bg-[#d2e6ec] py-14 mt-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-14">
 
         {/* LEFT SIDE HEADING */}
