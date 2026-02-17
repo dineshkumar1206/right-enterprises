@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-14 px-6">
+    <footer className="bg-black text-white py-8 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
         {/* Left - Logo & About */}
@@ -30,11 +30,11 @@ export default function Footer() {
           <div className="space-y-3 text-sm text-white/80">
 
             <div className="flex items-start gap-2">
-              <MapPin size={16} />
+              <MapPin size={16} className="mt-1 flex-shrink-0" />
               <p>
                 11/2, Carpenter St, opposite Sri Srinivasa Hotel,
                 Neelam Garden, Sembiyan, Perambur,
-                Chennai, Tamil Nadu 600011.
+                Chennai, Tamil Nadu 600011
               </p>
             </div>
 
@@ -104,7 +104,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Line */}
-      <div className="border-t border-white/20 mt-10 pt-6 text-center text-sm text-white/60">
+      <div className="border-t border-white/20 mt-6 pt-8 text-center text-sm text-white/60">
         © {new Date().getFullYear()} Right Enterprises. All Rights Reserved.
       </div>
     </footer>
