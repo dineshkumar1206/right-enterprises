@@ -40,7 +40,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-2">
               <Phone size={16} />
-              <a href="tel:9841382107" className="hover:text-pink-400 transition">
+              <a href="tel:9841382107" className="hover:text-gray-300 transition">
                 98413 82107
               </a>
             </div>
@@ -49,7 +49,7 @@ export default function Footer() {
               <Mail size={16} />
               <a
                 href="mailto:rightenterprises19@gmail.com"
-                className="hover:text-pink-400 transition"
+                className="hover:text-gray-300 transition"
               >
                 rightenterprises19@gmail.com
               </a>
@@ -84,17 +84,17 @@ export default function Footer() {
 
           <ul className="space-y-3 text-sm text-white/80">
             <li>
-              <Link to="/gallery" className="hover:text-pink-400 transition">
+              <Link to="/gallery" className="hover:text-gray-300 transition">
                 Gallery
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-pink-400 transition">
+              <Link to="/about" className="hover:text-gray-300 transition">
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-pink-400 transition">
+              <Link to="/contact" className="hover:text-gray-300 transition">
                 Contact
               </Link>
             </li>

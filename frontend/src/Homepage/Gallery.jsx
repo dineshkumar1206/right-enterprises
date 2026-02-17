@@ -6,11 +6,35 @@ export default function Gallery() {
   const [mobileIndex, setMobileIndex] = useState(0); // for mobile slider
 
   const images = [
+    //1 column
     "/image/022.jpg",
     "/image/044.jpg",
-    "/image/01.webp",
+    "/image/6306450.jpg",
     "/image/144.jpg",
-    "/image/NSK Brochure.jpg",
+    "/image/NSK Brochure.jpg",  
+
+    // 2column
+    "/image/01-Fishbsket Logo.jpg",
+    "/image/01-Outdoor Hoarding.jpg",
+    "/image/05-Hoarding.jpg",
+    "/image/04-Burger23.jpg",
+    "/image/011.jpg",
+
+    //3 column
+    "/image/06-Hoarding.jpg",
+    "/image/12.jpg",
+    "/image/13.jpg",
+    "/image/14-nsk.jpg",
+    "/image/055.jpg",
+
+    //4column
+    "/image/066.jpg",
+    "/image/077.jpg",
+    "/image/088.jpg",
+    "/image/099.jpg",
+    "/image/111.jpg",
+
+
   ];
 
   const prevSlide = () => {
@@ -34,37 +58,113 @@ export default function Gallery() {
             Gallery
           </h2>
 
-          {/* ================= Desktop Collage ================= */}
-          <div className="hidden md:flex gap-6 h-[750px]">
+         {/* ================= Desktop Collage ================= */}
+<div className="hidden md:flex flex-col gap-20">
 
-            {/* LEFT SIDE */}
-            <div className="w-1/2 flex flex-col gap-6">
+  {/* -------- FIRST COLLAGE -------- */}
+  <div className="flex gap-6 h-[750px]">
 
-              <div className="grid grid-cols-2 gap-6 h-[35%]">
-                <ImageBox src={images[0]} onClick={setActiveImage} />
-                <ImageBox src={images[1]} onClick={setActiveImage} />
-              </div>
+    {/* LEFT */}
+    <div className="w-1/2 flex flex-col gap-6">
+      <div className="grid grid-cols-2 gap-6 h-[35%]">
+        <ImageBox src={images[0]} onClick={setActiveImage} />
+        <ImageBox src={images[1]} onClick={setActiveImage} />
+      </div>
+      <div className="h-[65%]">
+        <ImageBox src={images[3]} onClick={setActiveImage} />
+      </div>
+    </div>
 
-              <div className="h-[65%]">
-                <ImageBox src={images[3]} onClick={setActiveImage} />
-              </div>
+    {/* RIGHT */}
+    <div className="w-1/2 flex flex-col gap-6">
+      <div className="h-1/2">
+        <ImageBox src={images[2]} onClick={setActiveImage} />
+      </div>
+      <div className="h-1/2">
+        <ImageBox src={images[4]} onClick={setActiveImage} />
+      </div>
+    </div>
 
-            </div>
+  </div>
 
-            {/* RIGHT SIDE */}
-            <div className="w-1/2 flex flex-col gap-6">
 
-              <div className="h-1/2">
-                <ImageBox src={images[2]} onClick={setActiveImage} />
-              </div>
+  {/* -------- SECOND COLLAGE (Below First) -------- */}
+  <div className="flex gap-6 h-[750px]">
 
-              <div className="h-1/2">
-                <ImageBox src={images[4]} onClick={setActiveImage} />
-              </div>
+    {/* LEFT */}
+    <div className="w-1/2 flex flex-col gap-6">
+      <div className="grid grid-cols-2 gap-6 h-[35%]">
+        <ImageBox src={images[5]} onClick={setActiveImage} />
+        <ImageBox src={images[6]} onClick={setActiveImage} />
+      </div>
+      <div className="h-[65%]">
+        <ImageBox src={images[8]} onClick={setActiveImage} />
+      </div>
+    </div>
 
-            </div>
+    {/* RIGHT */}
+    <div className="w-1/2 flex flex-col gap-6">
+      <div className="h-1/2">
+        <ImageBox src={images[7]} onClick={setActiveImage} />
+      </div>
+      <div className="h-1/2">
+        <ImageBox src={images[9]} onClick={setActiveImage} />
+      </div>
+    </div>
 
-          </div>
+  </div>
+
+  {/* -------- THIRD COLLAGE -------- */}
+<div className="flex gap-6 h-[750px]">
+
+  <div className="w-1/2 flex flex-col gap-6">
+    <div className="grid grid-cols-2 gap-6 h-[35%]">
+      <ImageBox src={images[10]} onClick={setActiveImage} />
+      <ImageBox src={images[11]} onClick={setActiveImage} />
+    </div>
+    <div className="h-[70%]">
+      <ImageBox src={images[13]} onClick={setActiveImage} />
+    </div>
+  </div>
+
+  <div className="w-1/2 flex flex-col gap-6">
+    <div className="h-1/2">
+      <ImageBox src={images[12]} onClick={setActiveImage} />
+    </div>
+    <div className="h-1/2">
+      <ImageBox src={images[14]} onClick={setActiveImage} />
+    </div>
+  </div>
+
+</div>
+
+{/* -------- FOURTH COLLAGE -------- */}
+<div className="flex gap-6 h-[750px]">
+
+  <div className="w-1/2 flex flex-col gap-6">
+    <div className="grid grid-cols-2 gap-6 h-[35%]">
+      <ImageBox src={images[15]} onClick={setActiveImage} />
+      <ImageBox src={images[16]} onClick={setActiveImage} />
+    </div>
+    <div className="h-[70%]">
+      <ImageBox src={images[18]} onClick={setActiveImage} />
+    </div>
+  </div>
+
+  <div className="w-1/2 flex flex-col gap-6">
+    <div className="h-1/2">
+      <ImageBox src={images[17]} onClick={setActiveImage} />
+    </div>
+    <div className="h-1/2">
+      <ImageBox src={images[19]} onClick={setActiveImage} />
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
 
           {/* ================= Mobile Slider ================= */}
           <div className="md:hidden relative w-full max-w-md mx-auto">

@@ -25,7 +25,7 @@ export default function Navbar() {
           <img
             src="/image/Right Enterprises logo.png"
             alt="Right Enterprises Logo"
-            className="pl-4 md:pl-16 h-10 sm:h-12 w-auto object-contain cursor-pointer"
+            className="pl-4 md:pl-16 h-14 sm:h-16 w-auto object-contain cursor-pointer"
           />
         </Link>
       </div>
@@ -36,11 +36,12 @@ export default function Navbar() {
           Home
         </Link>
 
+          <Link to="/about" className="hover:text-gray-300  transition whitespace-nowrap">
+          About Us
+        </Link>
+
         <Link to="/gallery" className="hover:text-gray-300  transition whitespace-nowrap">
           Gallery
-        </Link>
-        <Link to="/about" className="hover:text-gray-300  transition whitespace-nowrap">
-          About Us
         </Link>
 
         <Link to="/contact" className="hover:text-gray-300  transition whitespace-nowrap">
@@ -60,6 +61,14 @@ export default function Navbar() {
               Home
             </Link>
 
+             <Link 
+              to="/about" 
+              className="hover:text-pink-400 transition uppercase"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Us
+            </Link>
+
             <Link 
               to="/gallery" 
               className="hover:text-pink-400 transition uppercase"
@@ -67,13 +76,7 @@ export default function Navbar() {
             >
               Gallery
             </Link>
-            <Link 
-              to="/about" 
-              className="hover:text-pink-400 transition uppercase"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About Us
-            </Link>
+
 
             <Link 
               to="/contact" 
