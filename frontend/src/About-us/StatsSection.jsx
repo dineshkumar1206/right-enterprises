@@ -10,7 +10,6 @@ export default function StatsSection() {
     if (isInView) controls.start("visible");
   }, [isInView, controls]);
 
-  // SAME fade animation (unchanged style)
   const fadeVariants = {
     hidden: { y: 60, opacity: 0 },
     visible: (i = 1) => ({
@@ -20,7 +19,6 @@ export default function StatsSection() {
     }),
   };
 
-  // Count Up Component
   const CountUp = ({ end, suffix = "" }) => {
     const [count, setCount] = useState(0);
 
@@ -53,29 +51,15 @@ export default function StatsSection() {
   };
 
   const stats = [
-    {
-      number: 20,
-      suffix: "+",
-      label: "Years of Experience",
-      color: "#0093D5",
-    },
-    {
-      number: 1000,
-      suffix: "+",
-      label: "Projects Completed",
-      color: "#F55978",
-    },
-    {
-      number: 98,
-      suffix: "%",
-      label: "Client Satisfaction",
-      color: "#FECC00",
-    },
+    { number: 20, suffix: "+", label: "Years of Experience", color: "#0093D5" },
+    { number: 1000, suffix: "+", label: "Projects Completed", color: "#F55978" },
+    { number: 98, suffix: "%", label: "Client Satisfaction", color: "#FECC00" },
   ];
 
   return (
-    <section ref={ref} className="w-full py-6 px-4 md:px-12 bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section ref={ref} className="w-full bg-white py-6">
+      {/* Centered Container (NOT full width) */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 
         {/* ===== STAT BOXES ===== */}
         {stats.map((item, i) => (
@@ -85,13 +69,13 @@ export default function StatsSection() {
             variants={fadeVariants}
             initial="hidden"
             animate={controls}
-            className="rounded-2xl p-8 flex flex-col justify-center items-center text-center shadow-lg min-h-[280px]"
+            className="flex flex-col justify-center items-center text-center min-h-[380px]"
             style={{ backgroundColor: item.color }}
           >
             <h2 className="text-5xl font-bold text-white">
               <CountUp end={item.number} suffix={item.suffix} />
             </h2>
-            <p className="mt-4 text-white text-lg font-medium">
+            <p className="mt-4 text-white text-lg font-medium px-6">
               {item.label}
             </p>
           </motion.div>
@@ -103,7 +87,7 @@ export default function StatsSection() {
           variants={fadeVariants}
           initial="hidden"
           animate={controls}
-          className="rounded-2xl overflow-hidden shadow-lg min-h-[340px]"
+          className="min-h-[380px] overflow-hidden"
         >
           <img
             src="/image/251.jpg.jpeg"

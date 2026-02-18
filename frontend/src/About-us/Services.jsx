@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
-import {
-  Printer,
-  Image as ImageIcon,
-  Palette,
-  Scissors,
-} from "lucide-react";
+import digital from "../assets/boxes.png";
+import largeformat from "../assets/graphic-design.png";
+import design from "../assets/offset.png";
+import finishing from "../assets/printing.png";
 
 export default function Services() {
   return (
@@ -24,10 +22,14 @@ export default function Services() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-          {/* Service Card Component Used 4 Times */}
-
           <ServiceCard
-            icon={<Printer size={40} />}
+            icon={
+              <img
+                src={design}
+                alt="Digital Printing"
+                className="w-10 h-10 object-contain"
+              />
+            }
             title={
               <>
                 Digital and Offset <br /> Printing
@@ -37,7 +39,13 @@ export default function Services() {
           />
 
           <ServiceCard
-            icon={<ImageIcon size={40} />}
+            icon={
+              <img
+                src={finishing}
+                alt="Large Format Printing"
+                className="w-10 h-10 object-contain"
+              />
+            }
             title={
               <>
                 Large Format <br /> Printing
@@ -47,13 +55,25 @@ export default function Services() {
           />
 
           <ServiceCard
-            icon={<Palette size={40} />}
+            icon={
+              <img
+                src={largeformat}
+                alt="Graphic Design"
+                className="w-10 h-10 object-contain"
+              />
+            }
             title="Graphic Design"
             description={`Graphic Design brings ideas, stories, and brands to life visually. We create designs that are clear, creative, and meaningful. From logos to marketing materials, every detail is crafted with care. Our designs help your brand connect and stand out.`}
           />
 
           <ServiceCard
-            icon={<Scissors size={40} />}
+            icon={
+              <img
+                src={digital}
+                alt="Finishing Services"
+                className="w-10 h-10 object-contain"
+              />
+            }
             title="Finishing Services"
             description={`Finishing Services add the final touch that makes a difference. We enhance prints with precise cutting, binding, and folding. Each detail is handled with care for a polished look. The result is a professional, ready-to-use finish.`}
           />
@@ -76,13 +96,13 @@ function ServiceCard({ icon, title, description }) {
       transition={{ duration: 0.6 }}
       className="bg-[#d2e6ec] p-8 md:p-10 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
     >
-      {/* Icon - CENTERED */}
+      {/* Icon */}
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-        className="mb-6 text-gray-900 flex justify-center"
+        className="mb-6 flex justify-center"
       >
         {icon}
       </motion.div>
@@ -99,4 +119,3 @@ function ServiceCard({ icon, title, description }) {
     </motion.div>
   );
 }
-

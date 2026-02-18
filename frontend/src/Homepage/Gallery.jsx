@@ -22,7 +22,7 @@ export default function Gallery() {
 
     //3 column
     "/image/06-Hoarding.jpg",
-    "/image/12.jpg",
+    "/image/Whatsapp.jpg",
     "/image/13.jpg",
     "/image/14-nsk.jpg",
     "/image/055.jpg",
