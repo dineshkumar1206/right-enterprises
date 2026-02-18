@@ -8,8 +8,6 @@ export default function Home() {
     <>
     <div className="relative w-screen h-screen overflow-hidden">
 
-     
-
       {/* Background */}
       <div className="absolute inset-0 ">
         <img
