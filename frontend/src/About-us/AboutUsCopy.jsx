@@ -47,7 +47,7 @@ export default function AboutUs() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900"
             >
               About Us
             </motion.h2>

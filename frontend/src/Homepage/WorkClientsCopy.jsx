@@ -21,13 +21,13 @@ export default function WorkClients() {
   <div className="absolute left-1/2 -top-15 -translate-x-1/2 z-20">
 
   <div
-    className="relative bg-[#ff0048] text-white
+    className="relative bg-[#27689d] text-white
                w-[300px] h-[60px]
                flex items-center justify-center
                text-lg tracking-[0.10em]
                " 
   >
-    Work & Clients
+    Our Clients
 
     {/* Bigger Triangle */}
     <div
@@ -35,15 +35,14 @@ export default function WorkClients() {
                  w-0 h-0
                  border-l-[22px] border-l-transparent
                  border-r-[22px] border-r-transparent
-                 border-t-[22px] border-t-[#ff0048]"
+                 border-t-[22px] border-t-[#27689d]"
     ></div>
 
   </div>
 </div>
 
-
       {/* Space for overlap */}
-      <div className="-mt-11"></div>
+      <div className="-mt-50"></div>
 
       {/* Image Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 w-full cursor-pointer">
@@ -57,7 +56,7 @@ export default function WorkClients() {
             />
 
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-[#ff0a54]/80 opacity-0 
+            {/* <div className="absolute inset-0 bg-[#ff0a54]/80 opacity-0 
                             group-hover:opacity-100 transition duration-100 
                             flex items-center justify-center">
 
@@ -65,7 +64,7 @@ export default function WorkClients() {
                 I’m an image title
               </h3>
 
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
