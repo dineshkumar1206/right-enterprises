@@ -8,7 +8,7 @@ export default function Footer() {
 
         {/* Left - Logo & About */}
         <div>
-            <Link to={"/"} className="cursor-pointer">
+            <Link to={"/"} onClick={() => window.scrollTo(0, 0)} className="cursor-pointer">
           <img
             src="/image/Right Enterprises logo.png"
             alt="Right Enterprises Logo"
@@ -84,17 +84,17 @@ export default function Footer() {
 
           <ul className="space-y-3 text-sm text-white/80">
             <li>
-              <Link to="/gallery" className="hover:text-gray-300 transition">
+              <Link to="/gallery" onClick={() => window.scrollTo(0, 0)} className="hover:text-gray-300 transition">
                 Gallery
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-gray-300 transition">
+              <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-gray-300 transition">
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-gray-300 transition">
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-gray-300 transition">
                 Contact
               </Link>
             </li>

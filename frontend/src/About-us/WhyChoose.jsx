@@ -12,26 +12,26 @@ const textVariants = {
 const items = [
   {
     title: "Quality Assurance",
-    desc: "At Right Enterprises Printing Service, we are dedicated to delivering top-quality printed materials that exceed your expectations. Our commitment to excellence ensures that every project is handled with the utmost care and attention to detail.",
+    desc: "At Right Enterprises, quality is at the heart of everything we do. We follow strict checks at every stage to ensure flawless prints and finishes. Our commitment guarantees consistency, precision, and results you can trust every time.",
   },
   {
     title: "Collaborative Approach",
-    desc: "We believe in working closely with our clients to understand their vision and bring it to life through our printing solutions.",
+    desc: "We believe the best results come from working closely with our clients.We listen, collaborate, and adapt at every stage of the project. This partnership-driven approach ensures your vision is brought to life with precision and care.",
   },
   {
     title: "Timely Delivery",
-    desc: "We understand the importance of timelines in the printing industry. you can expect prompt and reliable delivery.",
+    desc: "We understand that deadlines matter.Our streamlined processes and efficient production ensure every project is completed on schedule. You can rely on us for prompt delivery without compromising on quality.",
   },
   {
     title: "Detail Oriented",
-    desc: "We strive to provide detail-oriented and personalized services that reflect your needs.",
+    desc: "We pay close attention to every detail, no matter how small.From design accuracy to final finishing, precision guides our process. This focus ensures high-quality results that meet the highest standards.",
   },
 ];
 
 export default function WhyChooseSection() {
   return (
-    <section className="w-full bg-[#d2e6ec] py-14 mt-24 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-14">
+    <section className="w-full bg-[#d2e6ec] py-14 mt-24 px-6 md:px-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
 
         {/* LEFT SIDE HEADING */}
         <motion.div
@@ -50,7 +50,7 @@ export default function WhyChooseSection() {
         </motion.div>
 
         {/* RIGHT SIDE CONTENT */}
-        <div className="md:w-1/2 flex flex-col gap-8">
+        <div className="md:w-1/2 flex flex-col gap-4">
 
           {items.map((item, i) => (
             <div key={i} className="flex items-start gap-6">

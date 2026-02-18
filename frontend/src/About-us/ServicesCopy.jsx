@@ -32,7 +32,7 @@ export default function Services() {
             }
             title={
               <>
-                Digital and Offset <br /> Printing
+               Offset and Digital<br /> Printing
               </>
             }
             description={`Digital and Offset Printing help turn your ideas into beautifully printed materials. Digital printing is perfect for quick jobs and smaller quantities. Offset printing delivers rich colors and consistent quality for large runs.`}

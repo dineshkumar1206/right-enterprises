@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="absolute pt-3 pb-3 top-0 left-0 w-full bg-[#000000] text-white min-h-[60px] flex items-center z-30 px-4 sm:px-6 md:px-8">
+    <nav className="fixed pt-3 pb-3 top-0 left-0 w-full bg-[#000000] text-white min-h-[60px] flex items-center z-30 px-4 sm:px-6 md:px-8">
 
       {/* LEFT SIDE: Logo + Mobile Menu */}
       <div className="flex items-center gap-4 pl-4 sm:pl-6 md:pl-10">
@@ -21,7 +21,7 @@ export default function Navbar() {
         </button>
 
         {/* Logo */}
-        <Link to="/">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)}>
           <img
             src="/image/Right Enterprises logo.png"
             alt="Right Enterprises Logo"
@@ -32,19 +32,19 @@ export default function Navbar() {
 
       {/* Center Navigation Links - Desktop */}
       <div className="hidden md:flex w-full justify-center items-center gap-10 text-[12px] tracking-[0.2em] uppercase">
-        <Link to="/" className="hover:text-gray-300  transition whitespace-nowrap">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)} className="hover:text-gray-300  transition whitespace-nowrap">
           Home
         </Link>
 
-          <Link to="/about" className="hover:text-gray-300  transition whitespace-nowrap">
+          <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-gray-300  transition whitespace-nowrap">
           About Us
         </Link>
 
-        <Link to="/gallery" className="hover:text-gray-300  transition whitespace-nowrap">
+        <Link to="/gallery" onClick={() => window.scrollTo(0, 0)} className="hover:text-gray-300  transition whitespace-nowrap">
           Gallery
         </Link>
 
-        <Link to="/contact" className="hover:text-gray-300  transition whitespace-nowrap">
+        <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-gray-300  transition whitespace-nowrap">
           Contact
         </Link>
       </div>

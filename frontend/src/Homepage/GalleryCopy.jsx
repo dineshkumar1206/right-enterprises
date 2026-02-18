@@ -55,7 +55,7 @@ export default function Gallery() {
         <div className="max-w-7xl mx-auto">
 
           <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
-            Offset and Digital Printing
+            Gallery
           </h2>
 
          {/* ================= Desktop Collage ================= */}
