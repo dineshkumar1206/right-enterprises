@@ -6,7 +6,9 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
+    <>
     <nav className="fixed pt-3 pb-3 top-0 left-0 w-full bg-[#000000] text-white min-h-[60px] flex items-center z-30 px-4 sm:px-6 md:px-8">
+      
 
       {/* LEFT SIDE: Logo + Mobile Menu */}
       <div className="flex items-center gap-4 pl-4 sm:pl-6 md:pl-10">
@@ -105,5 +107,8 @@ export default function Navbar() {
       </div> */}
 
     </nav>
+          <div className="bg-[#9dbe23] w-full h-25 " ></div>
+
+    </>
   );
 }

@@ -8,10 +8,8 @@ export default function AboutUs() {
   return (
     <>
       {/* Section Heading */}
-      <div className="py-12 mt-15 bg-[#9dbe23]">
-        {/* <h2 className="text-5xl text-center text-black">
-          About Us
-        </h2> */}
+      <div className="py-10 mt-0 bg-[#9dbe23]">
+      
       </div>
 
       <section className="w-full flex items-center justify-center px-4 md:px-10 lg:px-18  bg-[#9dbe23] pb-26">
@@ -47,7 +45,7 @@ export default function AboutUs() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900"
+              className="text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900"
             >
               About Us
             </motion.h2>

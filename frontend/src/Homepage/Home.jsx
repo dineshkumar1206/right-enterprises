@@ -6,10 +6,12 @@ export default function Home() {
   return (
 
     <>
-    <div className="relative  w-screen h-screen overflow-hidden">
+    <div className="relative w-screen h-screen overflow-hidden">
+
+     
 
       {/* Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 ">
         <img
           src="/image/homepage-banner.jpg"
           alt="background"
@@ -20,13 +22,10 @@ export default function Home() {
         {/* <div className="absolute inset-0 bg-gradient-to-b from-[#9c005d]/60 via-[#b10060]/55 to-[#3a003a]/80"></div> */}
       </div>
 
-      {/* Navbar */}
-      <div className="relative z-20">
-        <Navbar />
-      </div>
+      
 
   {/* Hero Content */}
-  <div className="relative flex flex-col items-center justify-center h-[80%]  text-center text-white  px-6 gap-6">
+  <div className="relative flex flex-col items-center justify-center h-[80%] text-center text-white  px-6 gap-6">
 
   {/* Main Heading */}
   <h1 className="font-bold text-[20px] sm:text-[26px] md:text-[34px] lg:text-[42px] leading-snug tracking-wide">

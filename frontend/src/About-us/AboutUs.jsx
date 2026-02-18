@@ -8,10 +8,8 @@ export default function AboutUs() {
   return (
     <>
       {/* Section Heading */}
-      <div className="py-12 mt-15 bg-[#9dbe23]">
-        {/* <h2 className="text-5xl text-center text-black">
-          About Us
-        </h2> */}
+      <div className="py-10 mt-0 bg-[#9dbe23]">
+      
       </div>
 
       <section className="w-full flex items-center justify-center px-4 md:px-10 lg:px-18  bg-[#9dbe23] pb-26">
