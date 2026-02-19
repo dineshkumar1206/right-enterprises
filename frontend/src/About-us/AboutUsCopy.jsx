@@ -8,7 +8,7 @@ export default function AboutUs() {
   return (
     <>
       {/* Section Heading */}
-      <div className="py-10 mt-0 bg-[#9dbe23]">
+      <div className="py-22 mt-0 bg-[#9dbe23]">
       
       </div>
 

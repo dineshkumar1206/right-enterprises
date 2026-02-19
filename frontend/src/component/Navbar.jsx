@@ -107,7 +107,7 @@ export default function Navbar() {
       </div> */}
 
     </nav>
-          <div className="bg-[#9dbe23] w-full h-25 " ></div>
+<div className="fixed top-[80px] left-0 w-full h-[25px] bg-[#9dbe23] z-20"></div>
 
     </>
   );
