@@ -52,7 +52,7 @@ export default function Contact() {
   setLoading(true);
 
   try {
-    const response = await fetch("http://localhost:5000/contact", {
+    const response = await fetch("https://amigowebster.in/right_enterprises_backend/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
