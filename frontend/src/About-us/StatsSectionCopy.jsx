@@ -92,7 +92,7 @@ export default function StatsSection() {
           <img
             src="/image/251.jpg.jpeg"
             alt="Stats"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[95%_center]"
           />
         </motion.div>
 
